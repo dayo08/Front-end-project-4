@@ -1,0 +1,336 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css?family=Exo:400,700");
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+.bgcrerative {
+  background: linear-gradient(45deg, #19b188, #046b92);
+  opacity: 1;
+}
+
+.sample {
+  max-width: 70vw;
+}
+.sample1 {
+  max-width: 90vw;
+}
+
+.slick-prev {
+  left: -13px !important;
+  z-index: 9 !important;
+}
+.slick-next {
+  right: -13px;
+}
+.slick-dots li button:before {
+  font-size: 6px;
+  line-height: 20px;
+  position: absolute;
+  top: 0;
+  /* left: 0; */
+  width: 0px !important;
+  height: 0px !important;
+  content: "•";
+  text-align: center;
+  opacity: 0.25;
+  color: transparent !important;
+}
+
+.wordbg {
+  background-image: url("./img/world.png");
+  background-repeat: no-repeat;
+  /* z-index: 9999999; */
+  /* background-size: cover; */
+  background-position: center;
+  /* width: 100%; */
+  /* height: 100%; */
+}
+.bgagency {
+  background-image: url("./img/bgagency.png");
+  background-repeat: no-repeat;
+  z-index: 9999999;
+  background-size: cover;
+  background-position: start;
+  /* background-attachment: fixed; */
+}
+.bg-home-Testimonials {
+  background: url("./img/bgagency.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  padding: 100px 0 259px;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+::-webkit-scrollbar {
+  display: none;
+}
+.frame {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  overflow: hidden;
+  position: relative;
+  color: white;
+  padding-top: 2em;
+  border-radius: 2em;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.75), 0 8px 30px rgba(0, 0, 0, 0.5);
+}
+.frame:before {
+  content: "";
+  display: block;
+  width: 4em;
+  height: 0.6em;
+  background: white;
+  margin: 0 auto;
+  z-index: 10;
+  border-radius: 10em;
+  mix-blend-mode: overlay;
+}
+.frame-header {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  align-items: center;
+  padding: 2rem;
+  gap: 5px;
+}
+.frame-header .image {
+  margin-right: 1.5em;
+}
+.frame-header .image > img {
+  width: 80px;
+  border-radius: 0.5em;
+  box-shadow: 0 3px 30px rgba(0, 0, 0, 0.2), 0 3px 10px rgba(0, 0, 0, 0.4);
+}
+.frame-header .info .title {
+  font-size: 1.8rem;
+}
+.frame-header .info .subtitle {
+  font-size: 1.2rem;
+  margin-top: 0.25em;
+}
+.frame-lyrics {
+  position: relative;
+  z-index: 10;
+  flex-grow: 1;
+  padding: 2rem;
+  padding-top: 0;
+  font-size: 15px;
+  overflow-y: auto;
+}
+.frame-lyrics > div {
+  color: rgba(255, 255, 255, 0.75);
+}
+.frame-lyrics > div + div {
+  margin-top: 1.4em;
+}
+.frame-lyrics > div.active {
+  color: white;
+  /* font-size: 3rem; */
+  margin-top: 0.8em;
+}
+.frame-lyrics > div:not(.active) {
+  filter: blur(0.05px);
+}
+.frame-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: 0;
+  z-index: 0;
+  overflow: hidden;
+  border-radius: 2em;
+}
+.frame-bg .bg-color,
+.frame-bg .bg-black {
+  width: 200%;
+  position: absolute;
+  border-radius: 100em;
+  animation: rotate 35s linear infinite;
+}
+.frame-bg .bg-color {
+  right: 0;
+  top: 0;
+  filter: blur(40px);
+  z-index: 10;
+  mix-blend-mode: luminosity;
+}
+.frame-bg .bg-black {
+  left: 0;
+  bottom: 0;
+  filter: blur(40px);
+  z-inxed: 1;
+  animation-direction: reverse;
+  animation-delay: 10s;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat:700");
+.hero {
+  background: #4e54c8;
+  background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
+  width: 100%;
+  height: 100%;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.hero__title {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  z-index: 1;
+}
+.cube {
+  position: absolute;
+  top: 80vh;
+  left: 45vw;
+  width: 10px;
+  height: 10px;
+  border: solid 1px #003298;
+  transform-origin: top left;
+  transform: scale(0) rotate(0deg) translate(-50%, -50%);
+  animation: cube 12s ease-in forwards infinite;
+}
+.cube:nth-child(2n) {
+  border-color: #0051f4;
+}
+.cube:nth-child(2) {
+  animation-delay: 2s;
+  left: 25vw;
+  top: 40vh;
+}
+.cube:nth-child(3) {
+  animation-delay: 4s;
+  left: 65vw;
+  top: 50vh;
+}
+.cube:nth-child(4) {
+  animation-delay: 6s;
+  left: 70vw;
+  top: 10vh;
+}
+.cube:nth-child(5) {
+  animation-delay: 8s;
+  left: 10vw;
+  top: 85vh;
+}
+.cube:nth-child(6) {
+  animation-delay: 10s;
+  left: 50vw;
+  top: 10vh;
+}
+@keyframes cube {
+  from {
+    transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    opacity: 1;
+  }
+  to {
+    transform: scale(20) rotate(960deg) translate(-50%, -50%);
+    opacity: 0;
+  }
+}
+
+/* Dodecahedron animation */
+
+.view {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.plane {
+  width: 120px;
+  height: 120px;
+  transform-style: preserve-3d;
+}
+.plane.main {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  transform: rotateX(60deg) rotateZ(-30deg);
+  animation: rotate 20s infinite linear;
+}
+.plane.main .circle {
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  transform-style: preserve-3d;
+  border-radius: 100%;
+  box-sizing: border-box;
+  box-shadow: 0 0 60px rgb(13, 4, 99), inset 0 0 60px #0051f4;
+}
+.plane.main .circle::before,
+.plane.main .circle::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 10%;
+  height: 10%;
+  border-radius: 100%;
+  background: rgb(13, 4, 99);
+  box-sizing: border-box;
+  box-shadow: 0 0 60px 2px #0051f4;
+}
+.plane.main .circle::before {
+  transform: translateZ(-90px);
+}
+.plane.main .circle::after {
+  transform: translateZ(90px);
+}
+.plane.main .circle:nth-child(1) {
+  transform: rotateZ(72deg) rotateX(63.435deg);
+}
+.plane.main .circle:nth-child(2) {
+  transform: rotateZ(144deg) rotateX(63.435deg);
+}
+.plane.main .circle:nth-child(3) {
+  transform: rotateZ(216deg) rotateX(63.435deg);
+}
+.plane.main .circle:nth-child(4) {
+  transform: rotateZ(288deg) rotateX(63.435deg);
+}
+.plane.main .circle:nth-child(5) {
+  transform: rotateZ(360deg) rotateX(63.435deg);
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateX(0) rotateY(0) rotateZ(0);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+  }
+}
